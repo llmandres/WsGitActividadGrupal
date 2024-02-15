@@ -19,4 +19,18 @@ public class Usuario {
 			this.nombre = nombre;
 			this.valoraciones = valoraciones;
 		}
+		
+		  public double calcularValoracionMedia() {
+		        if (valoraciones.length == 0)
+		            return 0;
+		        int suma = 0;
+		        for (double valoracion : valoraciones) {
+		            suma += valoracion;
+		        }
+		        return suma / valoraciones.length;
+		    }
+
+		    public void mostrarValoraciones() {
+		        System.out.println("Valoraciones del usuario " + nombre + " : " + Arrays.toString(valoraciones));
+		    }
 }
